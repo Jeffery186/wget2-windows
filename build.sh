@@ -16,7 +16,8 @@ cd cd $PWD_WORK_PATHwget https://gnuwget.gitlab.io/wget2/wget2-latest.tar.gz && 
 sudo apt-get -y -qq install mingw-w64 mingw-w64-x86-64-dev mingw-w64-i686-dev mingw-w64-tools make m4 automake
 
 cd $PWD_WORK_PATH/wget2-2.0.0
-./configure \
+CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUILD=1 -DCARES_STATICLIB=1 -DPCRE2_STATIC=1 -DNDEBUG -O2 -march=x86-64 -mtune=generic" \
+ ./configure \
  --host=x86_64-w64-mingw32 \
  --prefix=$INSTALL_PATH
 make
