@@ -20,8 +20,14 @@ jobs:
         run: |
           /bin/bash ${GITHUB_WORKSPACE}/build.sh
 
-      - name: Upload Artifact
+      - name: Upload wget2 for Linux
         uses: actions/upload-artifact@v2
         with:
-          name: wget2-2.0.0
+          name: wget2-2.0.0-linux-amd64
           path: /usr/local/bin/wget2
+
+      - name: Upload wget2 for Windows
+        uses: actions/upload-artifact@v2
+        with:
+          name: wget2-2.0.0-windows-x64
+          path: install/wget-gnutls/wget2.exe
