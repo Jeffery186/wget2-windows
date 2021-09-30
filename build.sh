@@ -22,6 +22,6 @@ cd wget2-2.0.0
 make
 sudo make install
 mkdir $INSTALL_PATH/wget-gnutls
-tree
+ls $INSTALL_PATH/
 cp $INSTALL_PATH/bin/wget2.exe $INSTALL_PATH/wget-gnutls
 x86_64-w64-mingw32-strip $INSTALL_PATH/wget-gnutls/wget2.exe
