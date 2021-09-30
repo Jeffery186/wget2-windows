@@ -21,4 +21,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: Wget2
-          path: ${GITHUB_WORKSPACE}/wget2-2.0.0/
+          path: wget2-2.0.0/
