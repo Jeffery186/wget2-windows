@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt-get update
+sudo apt-get update -qq
 sudo apt-get install -y -qq autotools-dev rsync tar texinfo pkg-config doxygen pandoc gettext libiconv-hook-dev \
  libiconv-hook1 zlib1g liblzma5 libbz2-1.0 libbrotli1 libzstd1 libgnutls30 libidn2-0 flex libpsl5 libnghttp2-14 \
  libmicrohttpd12 lzip lcov libgpgme11 libpcre2-32-0 libwolfssl24 autopoint
