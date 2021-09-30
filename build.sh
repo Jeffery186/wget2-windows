@@ -2,7 +2,7 @@
 mkdir install
 export INSTALL_PATH=$PWD/install
 sudo apt-get -qq update
-sudo apt-get -y -qq install wget git tar gcc cmake autotools-dev rsync tar texinfo pkg-config doxygen pandoc gettext libiconv-hook-dev \
+sudo apt-get -y -qq install tree wget git tar gcc cmake autotools-dev rsync tar texinfo pkg-config doxygen pandoc gettext libiconv-hook-dev \
  libiconv-hook1 zlib1g liblzma5 libbz2-1.0 libbrotli1 brotli libbrotli-dev libzstd1 libgnutls28-dev libidn2-0 flex libpsl5 libnghttp2-14 \
  libmicrohttpd-dev lzip clzip libgpgme-dev lcov libgpgme11 libpcre2-32-0 autopoint libzstd-dev libpsl-dev libnghttp2-dev
 
@@ -15,7 +15,6 @@ tar -xzf wget2-latest.tar.gz && cd wget2-2.0.0 && ./configure && make && make ch
 
 sudo apt-get -y -qq install mingw-w64 mingw-w64-x86-64-dev mingw-w64-i686-dev mingw-w64-tools make m4 automake
 
-ls
 cd wget2-2.0.0
 ./configure \
  --host=x86_64-w64-mingw32 \
@@ -23,5 +22,6 @@ cd wget2-2.0.0
 make
 sudo make install
 mkdir $INSTALL_PATH/wget-gnutls
+tree
 cp $INSTALL_PATH/bin/wget2.exe $INSTALL_PATH/wget-gnutls
 x86_64-w64-mingw32-strip $INSTALL_PATH/wget-gnutls/wget2.exe
