@@ -5,7 +5,7 @@ sudo apt-get -y -qq install wget git tar autotools-dev rsync tar texinfo pkg-con
  libmicrohttpd12 lzip clzip libgpgme-dev lcov libgpgme11 libpcre2-32-0 autopoint libzstd-dev libpsl-dev libnghttp2-dev
 
 # build libhsts
-wget https://gitlab.com/rockdaboot/libhsts/-/archive/master/libhsts-master.tar.gz && tar -xzf libhsts-master.tar.gz && cd libhsts-master && autoreconf -fi && ./configure && make && make check && make install && cd ..
+wget https://gitlab.com/rockdaboot/libhsts/-/archive/master/libhsts-master.tar.gz && tar -xzf libhsts-master.tar.gz && cd libhsts-master && autoreconf -fi && ./configure && make && make check && sudo make install && cd ..
 
 # build wget2
 wget https://gnuwget.gitlab.io/wget2/wget2-latest.tar.gz
