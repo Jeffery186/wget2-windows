@@ -17,8 +17,8 @@ jobs:
           sudo rm -rf /usr/share/dotnet /usr/local/lib/android
           /bin/bash ${GITHUB_WORKSPACE}/build.sh
 
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: wget2-2.0.0
-          path: wget2-2.0.0/
+#      - name: Upload Artifact
+#        uses: actions/upload-artifact@v2
+#        with:
+#          name: wget2-2.0.0
+#          path: wget2-2.0.0/
