@@ -18,7 +18,6 @@ jobs:
 
       - name: Build
         run: |
-          x86_64-w64-mingw32-gcc --version
           /bin/bash ${GITHUB_WORKSPACE}/build.sh
 
 #      - name: Upload wget2 for Linux Amd64
