@@ -265,7 +265,7 @@ sudo make install
 cd "$PWD_WORK_PATH" && wget https://gnuwget.gitlab.io/wget2/wget2-latest.tar.gz && tar -xf wget2-latest.tar.gz
 # && ./configure && make && sudo make install
 cd wget2-2.0.0
-CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUILD=1 -DCARES_STATICLIB=1 -DPCRE2_STATIC=1 -DNDEBUG -O2 -march=x86-64 -mtune=generic" \
+CC=x86_64-w64-mingw32-gcc CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUILD=1 -DCARES_STATICLIB=1 -DPCRE2_STATIC=1 -DNDEBUG -O2 -march=x86-64 -mtune=generic" \
   LDFLAGS="-L$INSTALL_PATH/lib -static -static-libgcc" \
   GNUTLS_CFLAGS=$CFLAGS \
   GNUTLS_LIBS="-L$INSTALL_PATH/lib -lgnutls" \
