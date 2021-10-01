@@ -166,7 +166,7 @@ sudo make install
 
 #-----------------------------------------------------------------------------------------------------------------------
 #build pcre2
-cd "$PWD_WORK_PATH" && wget https://ftp.pcre.org/pub/pcre/pcre2-10.37.zip && tar -xf pcre2-10.37.zip
+cd "$PWD_WORK_PATH" && wget https://ftp.pcre.org/pub/pcre/pcre2-10.37.tar.gz && tar -xf pcre2-10.37.tar.gz
 cd pcre2-10.37
 ./configure \
   --host=$TARGET \
