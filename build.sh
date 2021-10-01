@@ -26,7 +26,8 @@ cd "$PWD_WORK_PATH" && wget https://gitlab.com/rockdaboot/libhsts/-/archive/mast
 
 #-----------------------------------------------------------------------------------------------------------------------
 #install mingw-w64
-sudo apt-get -y -qq install mingw-w64 mingw-w64-x86-64-dev mingw-w64-i686-dev mingw-w64-tools make m4 automake
+sudo apt-get -y -qq install mingw-w64 mingw-w64-x86-64-dev mingw-w64-i686-dev mingw-w64-tools make m4 automake gcc-mingw-w64 \
+  gcc-mingw-w64-base gcc-mingw-w64-i686 gcc-mingw-w64-x86-64 g++-mingw-w64 g++-mingw-w64-i686 g++-mingw-w64-x86-64
 
 #-----------------------------------------------------------------------------------------------------------------------
 #build gmp
