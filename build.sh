@@ -64,10 +64,9 @@ make
 sudo make install
 
 #-----------------------------------------------------------------------------------------------------------------------
-#build libtasn
-cd "$PWD_WORK_PATH" && wget https://ftp.gnu.org/gnu/libtasn1/libtasn1-4.17.0.tar.gz && tar -zf libtasn1-4.17.0.tar.gz
-cd libtasn1-4.17.0
-cd libidn2-2.3.0
+#build libidn2
+cd "$PWD_WORK_PATH" && wget https://ftp.gnu.org/gnu/libidn/libidn2-2.3.2.tar.gz && tar -xf libidn2-2.3.2.tar.gz
+cd libidn2-2.3.2
 ./configure \
   --host=$TARGET \
   --disable-shared \
