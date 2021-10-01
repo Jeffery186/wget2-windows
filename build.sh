@@ -23,13 +23,13 @@ cd "$PWD_WORK_PATH" && wget https://gnuwget.gitlab.io/wget2/wget2-latest.tar.gz 
 sudo apt-get -y -qq install mingw-w64 mingw-w64-x86-64-dev mingw-w64-i686-dev mingw-w64-tools make m4 automake
 
 cd "$PWD_WORK_PATH" && wget https://gmplib.org/download/gmp/gmp-6.2.1.tar.xz && tar -xf gmp-6.2.1.tar.xz && cd gmp-6.2.1 \
- ./configure \
+ && ./configure \
  --host=x86_64-w64-mingw32 \
  --disable-shared \
  --prefix="$INSTALL_PATH"
 
 cd "$PWD_WORK_PATH" && wget https://ftp.gnu.org/gnu/nettle/nettle-3.7.3.tar.gz && tar -xf nettle-3.7.3.tar.gz && cd nettle-3.7.3 \
- CFLAGS="-I$INSTALL_PATH/include" \
+ && CFLAGS="-I$INSTALL_PATH/include" \
  LDFLAGS="-L$INSTALL_PATH/lib" \
  ./configure \
  --host=x86_64-w64-mingw32 \
