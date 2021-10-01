@@ -282,7 +282,7 @@ CC=x86_64-w64-mingw32-gcc CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUIL
   ./configure \
   --build=$TARGET \
   --host=$TARGET \
-  --disable-shared \
+  --enable-cross-guesses=conservative \
   --prefix=$INSTALL_PATH \
   --disable-valgrind-tests \
   --with-ssl=gnutls \
