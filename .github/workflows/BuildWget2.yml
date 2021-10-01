@@ -31,3 +31,9 @@ jobs:
         with:
           name: wget2-2.0.0-windows-x64
           path: install/
+
+      - name: Upload build log
+        uses: actions/upload-artifact@v2
+        with:
+          name: wget2-build-log
+          path: wget2-2.0.0/

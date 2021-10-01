@@ -12,7 +12,7 @@ sudo apt-get -y -qq install tree wget git tar gcc cmake autotools-dev rsync tar 
   libidn2-0 flex libpsl5 libnghttp2-14 libmicrohttpd-dev lzip clzip libgpgme-dev lcov libgpgme11 libpcre2-32-0 autopoint \
   libzstd-dev libpsl-dev libnghttp2-dev
 
-wget https://ftp.gnu.org/gnu/gcc/gcc-11.2.0/gcc-$GCC_VERSION.tar.gz
+wget -q https://ftp.gnu.org/gnu/gcc/gcc-11.2.0/gcc-$GCC_VERSION.tar.gz
 wget https://udomain.dl.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v$MINGW_VERSION.zip
 wget https://www.mpfr.org/mpfr-4.1.0/mpfr-4.1.0.tar.gz
 wget https://ftp.gnu.org/gnu/mpc/mpc-1.2.1.tar.gz
@@ -279,14 +279,10 @@ CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUILD=1 -DCARES_STATICLIB=1 -D
   METALINK_LIBS="-L$INSTALL_PATH/lib -lmetalink -lexpat" \
   LIBS="-L$INSTALL_PATH/lib -lhogweed -lnettle -lgmp -ltasn1 -lidn2 -lpsl -lcares -lunistring -liconv -lpcre2-8 -lmetalink -lexpat -lgpgme -lassuan -lgpg-error -lz -lcrypt32" \
   ./configure \
-  --host=x86_64-w64-mingw32 \
+  --host=$TARGET \
   --prefix=$INSTALL_PATH \
-  --disable-debug \
   --disable-valgrind-tests \
-  --enable-iri \
-  --enable-pcre2 \
   --with-ssl=gnutls \
-  --with-included-libunistring \
   --with-libidn \
   --with-cares \
   --with-libpsl \
