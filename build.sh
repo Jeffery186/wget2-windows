@@ -10,7 +10,7 @@ sudo apt-get -qq update
 sudo apt-get -y -qq install g++ tree wget git tar cmake autotools-dev rsync tar texinfo pkg-config doxygen pandoc gettext \
   libiconv-hook-dev libiconv-hook1 zlib1g liblzma5 libbz2-1.0 libbrotli1 brotli libbrotli-dev libzstd1 libgnutls28-dev \
   libidn2-0 flex libpsl5 libnghttp2-14 libmicrohttpd-dev lzip clzip libgpgme-dev lcov libgpgme11 libpcre2-32-0 autopoint \
-  libzstd-dev libpsl-dev libnghttp2-dev
+  libzstd-dev libpsl-dev libnghttp2-dev autoconf automake valgrind
 
 wget -q https://ftp.gnu.org/gnu/gcc/gcc-11.2.0/gcc-$GCC_VERSION.tar.gz
 wget https://udomain.dl.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v$MINGW_VERSION.zip
