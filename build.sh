@@ -280,7 +280,9 @@ CC=x86_64-w64-mingw32-gcc CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUIL
   METALINK_LIBS="-L$INSTALL_PATH/lib -lmetalink -lexpat" \
   LIBS="-L$INSTALL_PATH/lib -lhogweed -lnettle -lgmp -ltasn1 -lidn2 -lpsl -lcares -lunistring -liconv -lpcre2-8 -lmetalink -lexpat -lgpgme -lassuan -lgpg-error -lz -lcrypt32" \
   ./configure \
+  --build=$TARGET \
   --host=$TARGET \
+  --disable-shared \
   --prefix=$INSTALL_PATH \
   --disable-valgrind-tests \
   --with-ssl=gnutls \
