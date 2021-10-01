@@ -294,7 +294,9 @@ CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUILD=1 -DCARES_STATICLIB=1 -D
   --with-gpgme-prefix=$INSTALL_PATH
 make
 sudo make install
-#mkdir $INSTALL_PATH/wget-gnutls
-#ls $INSTALL_PATH/
+mkdir -p $INSTALL_PATH/wget-gnutls
+ls $INSTALL_PATH/
+cd $INSTALL_PATH
+tree
 #cp $INSTALL_PATH/bin/wget2.exe $INSTALL_PATH/wget-gnutls
 #x86_64-w64-mingw32-strip $INSTALL_PATH/wget-gnutls/wget2.exe
