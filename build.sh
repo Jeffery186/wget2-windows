@@ -7,7 +7,7 @@ export BUILDDIR=$PWD/mingw64-cross
 export GCC_VERSION=11.2.0
 export MINGW_VERSION=9.0.0
 sudo apt-get -qq update
-sudo apt-get -y -qq install g++ tree wget git cmake autotools-dev rsync tar texinfo pkg-config doxygen pandoc gettext \
+sudo apt-get -y -qq install tree wget git cmake autotools-dev rsync tar texinfo pkg-config doxygen pandoc gettext \
   libiconv-hook-dev libiconv-hook1 zlib1g liblzma-dev libidn2-0-dev libbrotli1 brotli libbrotli-dev libzstd1 libgnutls28-dev \
   flex libpsl5 libnghttp2-14 libmicrohttpd-dev lzip libgpgme-dev lcov libgpgme11 libpcre2-32-0 autopoint \
   libzstd-dev libpsl-dev libnghttp2-dev autoconf automake valgrind
@@ -284,7 +284,6 @@ CC=x86_64-w64-mingw32-gcc CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUIL
   --disable-valgrind-tests \
   --with-ssl=gnutls \
   --with-gpgme-prefix=$INSTALL_PATH \
-  --enable-threads=posix
 make
 sudo make install
 mkdir -p $INSTALL_PATH/wget-gnutls
