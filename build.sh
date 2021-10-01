@@ -41,14 +41,15 @@ sudo make install
 
 #-----------------------------------------------------------------------------------------------------------------------
 #build nettle
-cd "$PWD_WORK_PATH" && wget https://ftp.gnu.org/gnu/nettle/nettle-3.7.3.tar.gz && tar -xf nettle-3.7.3.tar.gz && cd nettle-3.7.3 &&
-  CFLAGS="-I$INSTALL_PATH/include" \
-    LDFLAGS="-L$INSTALL_PATH/lib" \
-    ./configure \
-    --host=$TARGET \
-    --disable-shared \
-    --disable-documentation \
-    --prefix="$INSTALL_PATH"
+cd "$PWD_WORK_PATH" && wget https://ftp.gnu.org/gnu/nettle/nettle-3.7.3.tar.gz && tar -xf nettle-3.7.3.tar.gz
+cd nettle-3.7.3
+CFLAGS="-I$INSTALL_PATH/include" \
+  LDFLAGS="-L$INSTALL_PATH/lib" \
+  ./configure \
+  --host=$TARGET \
+  --disable-shared \
+  --disable-documentation \
+  --prefix="$INSTALL_PATH"
 make
 sudo make install
 
@@ -284,7 +285,7 @@ CC=x86_64-w64-mingw32-gcc CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUIL
   --disable-valgrind-tests \
   --with-ssl=gnutls \
   --with-gpgme-prefix=$INSTALL_PATH \
-make
+  make
 sudo make install
 mkdir -p $INSTALL_PATH/wget-gnutls
 ls $INSTALL_PATH/
