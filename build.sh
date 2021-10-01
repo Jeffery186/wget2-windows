@@ -283,10 +283,6 @@ CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUILD=1 -DCARES_STATICLIB=1 -D
   --prefix=$INSTALL_PATH \
   --disable-valgrind-tests \
   --with-ssl=gnutls \
-  --with-libidn \
-  --with-cares \
-  --with-libpsl \
-  --with-metalink \
   --with-gpgme-prefix=$INSTALL_PATH
 make
 sudo make install
