@@ -27,6 +27,8 @@ cd "$PWD_WORK_PATH" && wget https://gmplib.org/download/gmp/gmp-6.2.1.tar.xz && 
  --host=x86_64-w64-mingw32 \
  --disable-shared \
  --prefix="$INSTALL_PATH"
+make
+sudo make install
 
 cd "$PWD_WORK_PATH" && wget https://ftp.gnu.org/gnu/nettle/nettle-3.7.3.tar.gz && tar -xf nettle-3.7.3.tar.gz && cd nettle-3.7.3 \
  && CFLAGS="-I$INSTALL_PATH/include" \
@@ -35,7 +37,9 @@ cd "$PWD_WORK_PATH" && wget https://ftp.gnu.org/gnu/nettle/nettle-3.7.3.tar.gz &
  --host=x86_64-w64-mingw32 \
  --disable-shared \
  --disable-documentation \
- --prefix=$INSTALL_PATH
+ --prefix="$INSTALL_PATH"
+make
+sudo make install
 
 cd "$PWD_WORK_PATH/wget2-2.0.0" && ./configure \
  --target=x86_64-w64-mingw32 \
