@@ -1,0 +1,34 @@
+Build Requirements
+
+The following packages are needed to build the software
+------------------------------------------------------------------------------------------------------------------------
+autotools (autoconf, autogen, automake, autopoint, libtool)
+python (recommended for faster bootstrap)
+rsync
+tar
+makeinfo (part of texinfo)
+pkg-config >= 0.28 (recommended)
+doxygen (for creating the documentation)
+pandoc (for creating the wget2 man page)
+gettext >= 0.18.2
+libiconv (needed for IRI and IDN support)
+libz >= 1.2.3 (the distribution may call the package zlib*, eg. zlib1g on Debian)
+liblzma >= 5.1.1alpha (optional, if you want HTTP lzma decompression)
+libbz2 >= 1.0.6 (optional, if you want HTTP bzip2 decompression)
+libbrotlidec/libbrotli >= 1.0.0 (optional, if you want HTTP brotli decompression)
+libzstd >= 1.3.0 (optional, if you want HTTP zstd decompression)
+libgnutls (3.3, 3.5 or 3.6)
+libidn2 >= 0.14 (libidn >= 1.25 if you don't have libidn2)
+flex >= 2.5.35
+libpsl >= 0.5.0
+libnghttp2 >= 1.3.0 (optional, if you want HTTP/2 support)
+libmicrohttpd >= 0.9.51 (optional, if you want to run the test suite)
+lzip (optional, if you want to build distribution tarballs)
+lcov (optional, for coverage reports)
+libgpgme >= 0.4.2 (optional, for automatic signature verification)
+libpcre | libpcre2 (optional, for filtering by PCRE|PCRE2 regex)
+libhsts (optional, to support HSTS preload lists)
+libwolfssl (optional, to support WolfSSL instead of GnuTLS)
+------------------------------------------------------------------------------------------------------------------------
+
+The versions are recommended, but older versions may also work.
