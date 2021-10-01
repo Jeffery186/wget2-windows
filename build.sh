@@ -284,8 +284,8 @@ CC=x86_64-w64-mingw32-gcc CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUIL
   --prefix=$INSTALL_PATH \
   --disable-valgrind-tests \
   --with-ssl=gnutls \
-  --with-gpgme-prefix=$INSTALL_PATH \
-  make
+  --with-gpgme-prefix=$INSTALL_PATH
+make
 sudo make install
 mkdir -p $INSTALL_PATH/wget-gnutls
 ls $INSTALL_PATH/
