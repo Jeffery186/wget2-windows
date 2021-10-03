@@ -1,0 +1,19 @@
+Build Requirements
+
+The following packages are needed to build the software
+------------------------------------------------------------------------------------------------------------------------
+autotools (autoconf, autogen, automake, autopoint, libtool)
+python (recommended for faster bootstrap)
+rsync
+tar
+makeinfo (part of texinfo)
+pkg-config >= 0.28 (recommended)
+doxygen (for creating the documentation)
+pandoc (for creating the wget2 man page)
+gettext >= 0.18.2
+libiconv (needed for IRI and IDN support)
+libz >= 1.2.3 (the distribution may call the package zlib*, eg. zlib1g on Debian)
+libgnutls (3.3, 3.5 or 3.6)
+libidn2 >= 0.14 (libidn >= 1.25 if you don't have libidn2)
+flex >= 2.5.35
+libpsl >= 0.5.0
