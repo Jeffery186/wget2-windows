@@ -7,7 +7,7 @@ export GCC_VERSION=11.2.0
 export MINGW_VERSION=9.0.0
 sudo apt-get -qq update
 sudo apt-get -y -qq install tree wget git make rsync tar libtool python texinfo pkg-config doxygen pandoc gettext \
-  flex autopoint autoconf automake valgrind
+  flex autopoint autoconf automake valgrind gcc
 
 wget -q https://ftp.gnu.org/gnu/gcc/gcc-11.2.0/gcc-$GCC_VERSION.tar.gz
 wget https://udomain.dl.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v$MINGW_VERSION.zip
