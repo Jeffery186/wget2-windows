@@ -21,4 +21,4 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: wget2
-          path: /usr/local/x86_64-w64-mingw32
+          path: /usr/local/x86_64-w64-mingw32/bin/
