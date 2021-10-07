@@ -4,22 +4,16 @@ name: Build Wget2
 
 on:
   push:
-    branches: [ main ]
+    branches: [ b01 ]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-20.04
+    container: ghcr.io/ibook86/docker-ubuntu-mingw:main
     steps:
       - uses: actions/checkout@v2
-
-      - name: Initialization environment
+      - name: Build
         run: |
-          sudo rm -rf /usr/share/dotnet /usr/local/lib/android
-          /bin/bash ${GITHUB_WORKSPACE}/build.sh
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: Wget2
-          path: ${GITHUB_WORKSPACE}/wget2-2.0.0/
+          chmod +x build.sh
+          /bin/bash ./build.sh
