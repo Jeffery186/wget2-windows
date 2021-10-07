@@ -1,0 +1,23 @@
+# Build Wget2
+
+name: Build Wget2
+
+on:
+  push:
+    branches: [ b01 ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    container: ghcr.io/ibook86/docker-ubuntu-mingw:main
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build
+        run: |
+          chmod +x build.sh
+          /bin/bash ./build.sh
+      - uses: actions/upload-artifact@v2   
+        with:     
+          name: wget2    
+          path: /usr/local/
