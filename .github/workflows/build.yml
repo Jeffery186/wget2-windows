@@ -4,7 +4,7 @@ name: Build Wget2
 
 on:
   push:
-    branches: [ b01 ]
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
