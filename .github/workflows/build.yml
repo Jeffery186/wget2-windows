@@ -1,6 +1,6 @@
 # Build Wget2
 
-name: Build Wget2
+name: Build Wget2 b1
 
 on:
   push:
