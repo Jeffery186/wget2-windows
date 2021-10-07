@@ -9,9 +9,10 @@ echo "WINEPATH=$WINEPATH"
 ./configure \
   --build=x86_64-pc-linux-gnu \
   --host=$PREFIX \
+  --prefix=$INSTALLDIR \
   --disable-shared &&
   make -j$(nproc) &&
   make install
 pwd
-cd /usr/local
+cd /usr/local/x86_64-w64-mingw32
 tree
