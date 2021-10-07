@@ -4,7 +4,8 @@ name: Build Wget2
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -17,7 +18,7 @@ jobs:
         run: |
           chmod +x build.sh
           /bin/bash ./build.sh
-      - uses: actions/upload-artifact@v2   
-        with:     
-          name: wget2    
+      - uses: actions/upload-artifact@v2
+        with:
+          name: wget2
           path: /usr/local/bin/
