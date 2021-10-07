@@ -1,6 +1,4 @@
 #!/bin/bash
-pwd
-tree
 wget https://gnuwget.gitlab.io/wget2/wget2-latest.tar.gz && tar -xf wget2-latest.tar.gz &&
   cd wget2-2.0.0 &&
   ./bootstrap
@@ -14,3 +12,6 @@ echo "WINEPATH=$WINEPATH"
   --disable-shared &&
   make -j$(nproc) &&
   make install
+pwd
+cd /usr/local
+tree
