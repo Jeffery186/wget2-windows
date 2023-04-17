@@ -18,7 +18,7 @@ jobs:
         run: |
           chmod +x build.sh
           /bin/bash ./build.sh
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: wget2
           path: /usr/local/x86_64-w64-mingw32/bin/
